@@ -1,18 +1,14 @@
-```
-
 N, K = map(int,input().split())
 
 item = []
 for _ in range(N):
     W, V = map(int, input().split())   
-    item.append(W,V)    _#(W, V) 를 하나의 튜플로 하는 리스트 생성_
+    item.append(W,V)    *#(W, V) 를 하나의 튜플로 하는 리스트 생성*
 
 dp = ([0] * (K+1))
 
 for W,V in item:
-    for w in range (K,W-1,-1):    _#K(제일 무거운 무게) 부터 물건의 무게까지 거꾸로 접근_
-        dp[w] = max(dp[w],dp[w-W]+V)    _#남는 무게만큼의 만족도 값을 앞의 리스트에서 찾아 더해주는 식_
+    for w in range (K,W-1,-1):    #K(제일 무거운 무게) 부터 물건의 무게까지 거꾸로 접근
+        dp[w] = max(dp[w],dp[w-W]+V)    #남는 무게만큼의 만족도 값을 앞의 리스트에서 찾아 더해주는 식
 
 print(dp[K])
-
-```
