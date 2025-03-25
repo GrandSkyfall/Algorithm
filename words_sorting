@@ -1,0 +1,15 @@
+N = int(input())
+
+words = []
+
+for _ in range (N):
+    words.append(input())
+
+words_set = list(set(words))    #리스트를 집합으로 바꾸면 중복된 원소가 삭제된다. 집합으로 만든 후 다시 리스트로 변환
+
+words_set.sort(key = lambda x: (len(x), x))    #key=lambda x: ...는 "각 요소 x에 대해 특정 값을 계산해서 그 값으로 정렬하라"는 뜻
+
+for i in words_set:
+    print(i)
+
+
