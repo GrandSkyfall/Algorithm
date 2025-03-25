@@ -3,7 +3,7 @@ N, K = map(int,input().split())
 item = []
 for _ in range(N):
     W, V = map(int, input().split())   
-    item.append(W,V)    *#(W, V) 를 하나의 튜플로 하는 리스트 생성*
+    item.append(W,V)    #(W, V) 를 하나의 튜플로 하는 리스트 생성
 
 dp = ([0] * (K+1))
 
