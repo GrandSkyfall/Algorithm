@@ -1,0 +1,15 @@
+N = int(input())
+
+fac = 1
+for i in range (1,N+1):
+    fac *= i
+
+count = 0
+fac_str = str(fac)    #문자열로 전환
+
+for i in range (-1, -len(fac_str), -1):
+    if fac_str[i] == "0":
+        count+=1
+    else: break
+
+print(count)
