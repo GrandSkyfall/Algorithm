@@ -1,0 +1,13 @@
+N = int(input())
+
+num = 666
+count = 0
+
+while count != N:
+    if "666" in str(num):    #"666"이 숫자안에 포함되는지. 문자열으로 간주
+        count += 1
+        num+=1
+    else:
+        num += 1
+
+print(num-1)
